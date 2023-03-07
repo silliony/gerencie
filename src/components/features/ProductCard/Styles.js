@@ -35,7 +35,43 @@ export const Price = styled.p`
     font-weight: bold;
 `;
 
-export const Button1 = styled.button`
-    padding: 5px 10px 5px 10px;
+export const Button1 = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 25px;
     background: #FF6363;
+    border-radius: 5px;
+    
+    :hover {
+        cursor: pointer;
+    }
+`;
+
+export const Button2 = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+
+    width: 100px;
+    height: 25px;
+    background: #FF6363;
+    border-radius: 5px;
+
+    .svg {
+        height: 100%;
+        width: 25px;
+        border-radius: 5px;
+        background: #731C1C;
+        padding: 3px;
+
+        :hover {
+            cursor: pointer;
+        }
+    }
 `;

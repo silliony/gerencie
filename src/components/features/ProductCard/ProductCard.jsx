@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Container, Img, Title, Price, Button1 } from './Styles.js';
+import { Container, Img, Title, Price, Button1, Button2 } from './Styles.js';
+import { HiPlus, HiMinus } from 'react-icons/hi';
 
 function ProductCard( {
     imgLink,
@@ -11,6 +12,19 @@ function ProductCard( {
     function increaseProdAmount() {
         setProductAmount(prod_amount + 1);
     }
+    
+    function decreaseProdAmount() {
+        setProductAmount(prod_amount - 1);
+    }
+
+
+    const ButtonAdd = <Button1 onClick={increaseProdAmount}>Adicionar</Button1>;
+
+    const Button = <Button2>
+        <HiMinus className='svg' onClick={decreaseProdAmount}/>
+        <p>{prod_amount}</p>
+        <HiPlus className='svg' onClick={increaseProdAmount}/>
+        </Button2>
 
     return (
         <Container className='container'>
@@ -19,7 +33,7 @@ function ProductCard( {
                 <Title>{name}</Title>
                 <Price>{price}</Price>
             </Container>
-            <Button1 type='button' onClick={increaseProdAmount}></Button1>
+            {prod_amount > 0 ? Button : ButtonAdd}
         </Container>
     );
 }
