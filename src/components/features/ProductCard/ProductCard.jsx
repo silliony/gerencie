@@ -18,7 +18,7 @@ function ProductCard( {
     }
 
 
-    const ButtonAdd = <Button1 onClick={increaseProdAmount}>Adicionar</Button1>;
+    const ButtonAdd = <Button1 onClick={increaseProdAmount}>ADICIONAR</Button1>;
 
     const Button = <Button2>
         <HiMinus className='svg' onClick={decreaseProdAmount}/>

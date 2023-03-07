@@ -41,6 +41,9 @@ export const Button1 = styled.div`
     justify-content: center;
     align-items: center;
 
+    font-weight: 600;
+    font-size: 16px;
+
     width: 100px;
     height: 25px;
     background: #FF6363;
@@ -57,6 +60,9 @@ export const Button2 = styled.div`
     justify-content: space-between;
     align-items: center;
     gap: 5px;
+
+    font-weight: 600;
+    font-size: 16px;
 
     width: 100px;
     height: 25px;
