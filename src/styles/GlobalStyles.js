@@ -8,7 +8,7 @@ export default createGlobalStyle`
   box-sizing: border-box;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inconsolata, Helvetica, sans-serif;
   font-size: 14px;
   background: white;
   text-rendering: optimizeLegibility;
