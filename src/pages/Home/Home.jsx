@@ -1,5 +1,6 @@
 import React from "react";
 import { Category } from "../../components/features";
+import { Catalog, Anchors, Anchor } from "./Styles";
 
 function Home() {
 
@@ -22,21 +23,26 @@ function Home() {
             "imgLink": "https://images-na.ssl-images-amazon.com/images/I/41njfODm63L._AC_SX184_.jpg",
             "name": "Shake de Proteína",
             "price": "R$5,60",
-            "category": "Doces",
+            "category": "Bebidas",
             "product_id": "23312"
         },
         {
             "imgLink": "https://images-na.ssl-images-amazon.com/images/I/41njfODm63L._AC_SX184_.jpg",
             "name": "Shake de Proteína",
             "price": "R$5,60",
-            "category": "Doces",
+            "category": "Bebidas",
             "product_id": "23312"
         }
     ];
 
+    const categories = [...new Set(json.map(item => item.category))];
+    const element = categories.map((e) => {return <Category id={e} title={e} json={json}/>});
+    const anchor = categories.map((e) => {return <Anchor href={"#" + e}>{e}</Anchor>});
+
     return (
         <div>
-            <Category title="Doces" json={json}/>
+            <Anchors>{anchor}</Anchors>
+            <Catalog>{element}</Catalog>
         </div>
     );
 }
