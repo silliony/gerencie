@@ -1,4 +1,5 @@
 import React from "react";
+import { NavBar } from "../../components/common";
 import { Category } from "../../components/features";
 import { Catalog, Anchors, Anchor } from "./Styles";
 
@@ -41,7 +42,10 @@ function Home() {
 
     return (
         <div>
-            <Anchors>{anchor}</Anchors>
+            <div style={{position:"sticky", top: 0}}>
+                <NavBar />
+                <Anchors>{anchor}</Anchors>
+            </div>
             <Catalog>{element}</Catalog>
         </div>
     );
