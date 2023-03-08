@@ -21,6 +21,7 @@ export const Container = styled.div`
 `;
 
 export const Img = styled.img`
+    height: 100px;
 `;
 
 export const Title = styled.p`
@@ -51,6 +52,7 @@ export const Button1 = styled.div`
     
     :hover {
         cursor: pointer;
+        background: #FF3F3F;
     }
 `;
 
@@ -73,11 +75,12 @@ export const Button2 = styled.div`
         height: 100%;
         width: 25px;
         border-radius: 5px;
-        background: #731C1C;
+        background: #C53D3D;
         padding: 3px;
 
         :hover {
             cursor: pointer;
+            background: #C51111;
         }
     }
 `;
