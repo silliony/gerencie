@@ -1,30 +1,79 @@
 [
     {
-        "imgLink": "https://images-na.ssl-images-amazon.com/images/I/415o7mAQO6L._AC_SX184_.jpg",
-        "name": "Cafezinho",
-        "price": "1.50",
+        "imgLink": "https://s3.us-east-2.amazonaws.com/s3.peccinec.astrusweb.dataware.com.br/tb_estrutura_produtos/237/dsp-wafer-trento-chocolate-ao-leite-512g_dd760b33e38cbbaf7dc1437445bc75ee.png",
+        "name": "Trento",
+        "price": "2.50",
         "category": "Doces",
-        "product_id": "21323"
+        "id": "101"
     },
     {
-        "imgLink": "https://images-na.ssl-images-amazon.com/images/I/41njfODm63L._AC_SX184_.jpg",
-        "name": "Shake de Proteína",
-        "price": "5.60",
+        "imgLink": "https://m.media-amazon.com/images/I/61cEwpXcP9L._AC_UL320_.jpg",
+        "name": "Bis Xtra",
+        "price": "3.50",
+        "category": "Doces",
+        "id": "104"
+    },
+    {
+        "imgLink": "https://m.media-amazon.com/images/I/81DVxfE4mXL._AC_UL320_.jpg",
+        "name": "Sorvete",
+        "price": "3.50",
+        "category": "Doces",
+        "id": "102"
+    },
+    {
+        "imgLink": "https://m.media-amazon.com/images/I/71sIrDNATWL._AC_UL320_.jpg",
+        "name": "Halls",
+        "price": "3.50",
+        "category": "Doces",
+        "id": "103"
+    },
+    {
+        "imgLink": "https://www.imigrantesbebidas.com.br/bebida/images/products/full/1935-refrigerante-guarana-antarctica-lata-350ml.jpg",
+        "name": "Guaraná (350ml)",
+        "price": "3.50",
         "category": "Bebidas",
-        "product_id": "23314"
+        "id": "201"
     },
     {
-        "imgLink": "https://images-na.ssl-images-amazon.com/images/I/41njfODm63L._AC_SX184_.jpg",
-        "name": "Shake de Proteína",
-        "price": "5.60",
+        "imgLink": "https://m.media-amazon.com/images/I/21BKhijESyL._AC_UL320_.jpg",
+        "name": "Coca-cola (350ml)",
+        "price": "4.00",
         "category": "Bebidas",
-        "product_id": "23312"
+        "id": "202"
+    },
+    {
+        "imgLink": "https://m.media-amazon.com/images/I/51UpHMSHUNL._AC_UL320_.jpg",
+        "name": "Água",
+        "price": "2.00",
+        "category": "Bebidas",
+        "id": "203"
+    },
+    {
+        "imgLink": "https://m.media-amazon.com/images/I/71bHcGUcDtL._AC_UL320_.jpg",
+        "name": "Suco (300ml)",
+        "price": "2.00",
+        "category": "Bebidas",
+        "id": "204"
     },
     {
         "imgLink": "https://images-na.ssl-images-amazon.com/images/I/41njfODm63L._AC_SX184_.jpg",
-        "name": "Arthur Jorge",
+        "name": "Suco 2",
+        "price": "2.00",
+        "category": "Bebidas",
+        "id": "205"
+    },
+    {
+        "imgLink": "https://m.media-amazon.com/images/I/71vnbXbV9tL._AC_UL320_.jpg",
+        "name": "Pipoca",
+        "price": "3.50",
+        "category": "Outros",
+        "id": "901"
+    },
+    {
+        "imgLink": "https://images-na.ssl-images-amazon.com/images/I/41njfODm63L._AC_SX184_.jpg",
+        "name": "Paiol (UAI)",
         "price": "1.00",
-        "category": "Bebida",
-        "product_id": "23312"
+        "category": "Outros",
+        "id": "902"
     }
 ]

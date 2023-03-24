@@ -1,7 +1,5 @@
-import { useState } from 'react';
-import { Container, Img, Title, Price, Button1, Button2 } from './Styles.js';
-import { HiPlus, HiMinus } from 'react-icons/hi';
-import { useCartStore } from '../../../context/globalContext.jsx';
+import { Container, Img, Title, Price } from './Styles.js';
+
 
 function ProductCard( {
     imgLink,
@@ -12,7 +10,9 @@ function ProductCard( {
 
     return (
         <Container className='container'>
-            <Img src={imgLink}/>
+            <div className='img-size'>
+                <Img src={imgLink}/>
+            </div>
             <Container className='text-container'>
                 <div className='align-middle'>
                     <Title>{name}</Title>

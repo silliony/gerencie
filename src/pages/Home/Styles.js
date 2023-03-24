@@ -24,4 +24,5 @@ export const Anchor = styled.a`
 `;
 
 export const Catalog = styled.div`
+    width: 100vw;
 `;
