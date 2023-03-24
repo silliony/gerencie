@@ -1,53 +1,60 @@
 import { useState } from 'react';
 import { Container, Img, Title, Price, Button1, Button2 } from './Styles.js';
 import { HiPlus, HiMinus } from 'react-icons/hi';
-import selectedProducts from '../../../data/selectedProducts.json';
-import { useProductsStore } from '../../../context/globalContext.jsx';
+import { useCartStore } from '../../../context/globalContext.jsx';
 
 function ProductCard( {
     imgLink,
     name,
     price,
-    product,
+    id
 }) {
-    const [prod_amount, setProductAmount] = useState(0);
+    const [prod_amount, setItemCount] = useState(0);
+    const increaseCount = useCartStore(state => state.increaseCount);
+    const decreaseQuant = useCartStore(state => state.decreaseQuant);
+    const addToCart = useCartStore(state => state.addProduct);
+    const updateProduct = useCartStore(state => state.updateProduct);
+    const removeFromCart = useCartStore(state => state.removeProduct);
+    const list = useCartStore(state => state.cart);
     
-    function increaseProdAmount() {
-        setProductAmount(prod_amount + 1);
-        if (prod_amount === 0 && !selectedProducts.includes(product)) {
-            const e = {};
-            e.id = product.product_id;
-            e.quantity = prod_amount;
-            e.price = product.price;
-            console.log(e);
-            selectedProducts.push(e);
-            console.log(selectedProducts);
-        } else if (selectedProducts.includes(product)) {
-
+    function handleInc() {
+        if (prod_amount === 0) {
+            setItemCount(prod_amount + 1);
+            increaseCount();
+            addToCart({ id: id, price: price, quantity: prod_amount + 1 });
+        } else {
+            setItemCount(prod_amount + 1);
+            increaseCount();
+            updateProduct({ id: id, quantity: prod_amount + 1});
         }
-    }
-    
-    function decreaseProdAmount() {
-        setProductAmount(prod_amount - 1);
+        console.log(list);
     }
 
+    function handleDec() {
+        if (prod_amount > 0) {
+            setItemCount(prod_amount - 1);
+            decreaseQuant();
+            removeFromCart(id);
+        }
+        console.log(list);
+    }
 
-    const ButtonAdd = <Button1 onClick={increaseProdAmount}>ADICIONAR</Button1>;
+    const DefaultButton = <Button1 onClick={handleInc} >ADICIONAR</Button1>;
 
-    const Button = <Button2>
-        <HiMinus className='svg' onClick={decreaseProdAmount}/>
-        <p>{prod_amount}</p>
-        <HiPlus className='svg' onClick={increaseProdAmount}/>
-        </Button2>
+    const DynamicButton = <Button2>
+            <HiMinus className='svg' onClick={handleDec}/>
+            <p>{prod_amount}</p>
+            <HiPlus className='svg' onClick={handleInc}/>
+        </Button2>;
 
     return (
         <Container className='container'>
             <Img src={imgLink}/>
             <Container className='text-container'>
                 <Title>{name}</Title>
-                <Price>{price}</Price>
+                <Price>{"R$" + price}</Price>
             </Container>
-            {prod_amount > 0 ? Button : ButtonAdd}
+            {prod_amount > 0 ? DynamicButton : DefaultButton}
         </Container>
     );
 }
