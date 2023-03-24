@@ -5,8 +5,8 @@ export const Container = styled.div`
     flex-direction: column;
     gap: 10px;
 
-    padding-top: 20px;
-
+    padding-top: 10px;
+    padding-bottom: 10px;
 `;
 
 export const Title = styled.h1`

@@ -7,8 +7,8 @@ import products from "../../data/products.json";
 function Home() {
 
     const categories = [...new Set(products.map(item => item.category))];
-    const element = categories.map((e) => {return <Category id={e} title={e} json={products}/>});
-    const anchor = categories.map((e) => {return <Anchor href={"#" + e}>{e}</Anchor>});
+    const element = categories.map((e) => {return <Category key={"c-" + e} id={e} title={e} json={products}/>});
+    const anchor = categories.map((e) => {return <Anchor key={"a-" + e} href={"#" + e}>{e}</Anchor>});
 
     return (
         <div>
