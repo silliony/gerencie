@@ -18,6 +18,12 @@ export const Container = styled.div`
         height: 68px;
         justify-content: space-between;
     }
+
+    .align-middle {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
 `;
 
 export const Img = styled.img`
