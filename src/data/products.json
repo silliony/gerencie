@@ -23,7 +23,7 @@
     {
         "imgLink": "https://m.media-amazon.com/images/I/71sIrDNATWL._AC_UL320_.jpg",
         "name": "Halls",
-        "price": "3.50",
+        "price": "2.50",
         "category": "Doces",
         "id": "103"
     },
@@ -68,5 +68,26 @@
         "price": "1.00",
         "category": "Outros",
         "id": "902"
+    },
+    {
+        "imgLink": "",
+        "name": "Clube Social",
+        "price": "1.50",
+        "category": "Salgadinhos",
+        "id": "301"
+    },
+    {
+        "imgLink": "",
+        "name": "Monster",
+        "price": "9.00",
+        "category": "Bebidas",
+        "id": "206"
+    },
+    {
+        "imgLink": "",
+        "name": "Torcida",
+        "price": "4.00",
+        "category": "Salgadinhos",
+        "id": "302"
     }
 ]
